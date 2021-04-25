@@ -1,8 +1,8 @@
-# Install a gazebo and rviz
-# link: http://wiki.ros.org/Installation/Ubuntu
-# Ubuntu Version: 18.04.5 lte
-# Ros Version: Melodic
-
+# Intallation Info
+ - Link: http://wiki.ros.org/Installation/Ubuntu
+ - Ubuntu Version: 18.04 lte
+ - Ros Version: Melodic
+#
 # Setup your sources.list
 - sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 
