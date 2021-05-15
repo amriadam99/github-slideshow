@@ -1,0 +1,29 @@
+1. Create ROS package
+https://hotblackrobotics.github.io/en/blog/2018/01/29/action-client-py/
+   (a) http://wiki.ros.org/ROS/Tutorials/CreatingPackage
+   (b) catkin_create_pkg speechnavi std_msgs rospy roscpp
+   (c) cd ~/catkin_ws
+   (d) cd /src/speechnavi
+   (c) replace speechnavi folder from internet
+   (d) cd script
+   (e) chmod +x speechnavi.py 
+   (f) cd ~/catkin_ws
+   (g) catkin_make
+   (h) cd
+   (i) gedit .bashrc
+   (j) add end line 
+       source ~/catkin_ws/devel/setup.bash
+   (k) source ~/catkin_ws/devel/setup.bash
+   (l) rosrun speechnavi speechnavi.py
+
+2. Check the position coordinate.
+   rostopic echo /move_base/goal
+
+3. change the program at:
+    goal.target_pose.pose.position.x = -5
+    goal.target_pose.pose.position.y = 5
+   # No rotation of the mobile base frame w.r.t. map frame
+    goal.target_pose.pose.orientation.w = 0.4
+
+4. rosrun speechnavi speechnavi.py 
+   (move to new target)
